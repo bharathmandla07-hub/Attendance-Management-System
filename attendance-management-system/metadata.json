@@ -1,0 +1,6 @@
+{
+  "name": "Attendance Management System",
+  "description": "A comprehensive full-stack Attendance Management System to manage student rosters, conduct daily check-ins, record attendance logs, and visualize overall attendance insights and reports.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

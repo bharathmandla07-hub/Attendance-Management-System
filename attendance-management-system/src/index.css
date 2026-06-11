@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --color-brand-50: var(--brand-50);
+  --color-brand-100: var(--brand-100);
+  --color-brand-500: var(--brand-500);
+  --color-brand-600: var(--brand-600);
+  --color-brand-700: var(--brand-700);
+  --color-brand-border: var(--brand-light-border);
+  --color-brand-text: var(--brand-color-text);
+}
+
+:root {
+  /* Default/Indigo */
+  --brand-50: #f5f3ff;
+  --brand-100: #ede9fe;
+  --brand-500: #8b5cf6;
+  --brand-600: #7c3aed;
+  --brand-700: #6d28d9;
+  --brand-glow: rgba(124, 58, 237, 0.08);
+  --brand-light-border: #e9e3ff;
+  --brand-color-text: #6d28d9;
+}
+
+[data-theme="indigo"] {
+  --brand-50: #f5f3ff;
+  --brand-100: #ede9fe;
+  --brand-500: #8b5cf6;
+  --brand-600: #7c3aed;
+  --brand-700: #6d28d9;
+  --brand-glow: rgba(124, 58, 237, 0.08);
+  --brand-light-border: #e9e3ff;
+  --brand-color-text: #6d28d9;
+}
+
+[data-theme="emerald"] {
+  --brand-50: #f0fdf4;
+  --brand-100: #dcfce7;
+  --brand-500: #10b981;
+  --brand-600: #059669;
+  --brand-700: #047857;
+  --brand-glow: rgba(5, 150, 105, 0.08);
+  --brand-light-border: #bbf7d0;
+  --brand-color-text: #047857;
+}
+
+[data-theme="slate"] {
+  --brand-50: #f8fafc;
+  --brand-100: #f1f5f9;
+  --brand-500: #64748b;
+  --brand-600: #475569;
+  --brand-700: #334155;
+  --brand-glow: rgba(71, 85, 105, 0.08);
+  --brand-light-border: #e2e8f0;
+  --brand-color-text: #334155;
+}
+
+[data-theme="sunset"] {
+  --brand-50: #fff7ed;
+  --brand-100: #ffedd5;
+  --brand-500: #f97316;
+  --brand-600: #ea580c;
+  --brand-700: #c2410c;
+  --brand-glow: rgba(234, 88, 12, 0.08);
+  --brand-light-border: #fed7aa;
+  --brand-color-text: #c2410c;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #f8fafc;
+  background-image: 
+    radial-gradient(at 0% 0%, var(--brand-50) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, #ffffff 0px, transparent 40%),
+    radial-gradient(at 50% 100%, #ffffff 0px, transparent 50%);
+  background-attachment: fixed;
+  color: #0f172a;
+  transition: background-image 0.4s ease-on-out, background-color 0.4s ease-on-out;
+}
+
+/* Custom interactive premium themes and cards */
+.theme-interactive-btn {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.theme-interactive-btn:hover {
+  box-shadow: 0 4px 12px var(--brand-glow);
+}
+
+/* Custom scrollbars for grid tables */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
